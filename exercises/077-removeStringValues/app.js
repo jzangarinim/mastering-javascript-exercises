@@ -5,7 +5,12 @@ let obj = {
 
 function removeStringValues(obj) {
     // your code here
-    
+    for (let property in obj) {
+        if (typeof obj[property] == 'string') {
+            delete obj[property];
+        }
+    }
+    return obj;
 }
 
 removeStringValues(obj);

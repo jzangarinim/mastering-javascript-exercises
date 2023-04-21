@@ -4,6 +4,14 @@ let obj = {
 
 function getSquaredElementsAtProperty(obj, key) {
     // your code here
+    let arr = [];
+    if (!obj[key] || obj[key].length == 0 || !Array.isArray(obj[key])) return arr;
+
+    arr = obj[key].map(value => {
+      return Math.pow(value, 2);
+    })
+
+    return arr;
 }
 
 let output = getSquaredElementsAtProperty(obj, 'key');
